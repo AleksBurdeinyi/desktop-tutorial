@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="{% static 'css/iced_drink.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+ <section class="sec">
+        <header>
+
+            <h1 style="color: white"> {{  product.category }}</h1>
+
+            <ul class="navigation">
+                <li><a href="http://127.0.0.1:8000/home/">Home</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="http://127.0.0.1:8000/comment/">Made Comment</a></li>
+                <li><a href="https://t.me//@AleksAssistantBot">Contact/AleksAssistantBot</a></li>
+            </ul>
+        </header>
+<div class="content">
+            <div class="textBox">
+                <h2>{{  product.category }}<br><span>{{  product.title }}</span></h2>
+                <p>{{ product.description }}</p>
+                <h2>$ {{  product.price }}</h2>
+                <a href="http://127.0.0.1:8000/all_products/all_products/">View All Products</a>
+
+            </div>
+            <div class="imgBox">
+                <img src="data:image/jpg;base64,{{ product.base_64 }}" width="290" height="300">
+                <h2 style="color:white;padding-top:-15px;">Коментарі для<br> {{ product.title }}</h2><br>
+    {% if comments %}
+        <ul>
+            {% for comment in comments %}
+                <li style="color:white;font-size:30px;list-style:none">
+                    <strong style="color:white;font-size:30px">Ім'я:</strong> {{ comment.name }}<br>
+                    <strong style="color:white;font-size:30px">Коментар:</strong> {{ comment.comment }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p style="color:white;font-size:30px;">Коментарі ще відсутні</p>
+    {% endif %}
+            </div>
+        </div>
+
+
+
+
+
+
+</section>
+</body>
+</html>

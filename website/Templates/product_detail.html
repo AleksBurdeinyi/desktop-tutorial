@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOP</title>
+
+<style>
+
+
+    p{
+
+            color:black;
+
+    }
+
+
+
+
+    nav {
+                margin: -37px auto 0;
+				padding-top:10px;
+            	position: relative;
+            	width: 560px;
+               	height: 70px;
+            	background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+            	border-radius: 8px;
+            	font-size: 0;
+}
+nav a {
+            	line-height: 50px;
+            	height: 100%;
+            	font-size: 15px;
+            	display: inline-block;
+            	position: relative;
+            	z-index: 1;
+            	text-decoration: none;
+            	text-transform: uppercase;
+            	text-align: center;
+            	color: white;
+            	cursor: pointer;
+           		background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+
+               	animation: gradient 10s ease infinite;
+}
+nav a:hover{
+                color:black;
+                background-color:grey;
+}
+
+a:nth-child(1) {
+            	width: 100px;
+}
+a:nth-child( 2) {
+            	width: 110px;
+}
+a:nth-child(3) {
+            	width: 100px;
+}
+
+
+
+
+
+h1 {
+            	text-align: center;
+            	margin: 20px 0 40px;
+            	text-align: center;
+            	font-size: 30px;
+            	 color:skyblue;
+            	text-shadow: 2px 2px 4px #000000;
+              	font-family: 'Cherry Swash', cursive;
+}
+
+.p1 {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    color:skyblue;
+    font-family: 'Cherry Swash',cursive;
+    font-size: 26px;
+}
+p {
+  animation-duration: 3s;
+  animation-name: slidein;
+  padding-left:120px;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 300%;
+
+  }
+
+  to {
+    margin-left: 5%;
+    width: 100%;
+  }
+}
+span {
+    color: #2BD6B4;
+}
+button{
+    font-size:20px;
+}
+.coment{
+            margin:0;
+            padding:0;
+}
+<!--form{-->
+<!--        padding-left:550px;-->
+<!--        margin-top:100px;-->
+<!--        font-size:20px;-->
+<!--}-->
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+}
+a
+{
+    text-decoration: none;
+}
+.product-card {
+    width: 380px;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    margin: 50px auto;
+    background: #fafafa;
+    float:left;
+    margin:20px;
+}
+
+.badge {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: red;
+    color: #fff;
+    padding: 3px 10px;
+}
+
+.product-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 50px;
+    background: #f0f0f0;
+}
+
+.product-tumb img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-details {
+    padding: 30px;
+}
+
+.product-catagory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 18px;
+}
+
+.product-details h4 a {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.product-details h4 a:hover {
+    color: #fbb72c;
+}
+
+.product-details p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #999;
+}
+
+.product-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.product-bottom-details div {
+    float: left;
+    width: 50%;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #fbb72c;
+    font-weight: 600;
+}
+
+.product-price small {
+    font-size: 80%;
+    font-weight: 400;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.product-links {
+    text-align: right;
+}
+
+.product-links a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.product-links a:hover {
+    color: #fbb72c;
+}
+back-face{
+  transform: rotateY(180deg);
+  background: linear-gradient(45deg,#043348 0%,#032535 100%);
+}
+.back {
+  color: white;
+}
+.back h2{
+  font-size: 33px;
+  padding-bottom: 5px;
+}
+.back span{
+  font-size: 25px;
+}
+.icons{
+  margin: 10px 0;
+  display: block;
+}
+i.fab{
+  color:  #042f4b;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  background: white;
+  border-radius: 50%;
+  margin: 0 5px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.center:hover > .back-face{
+  transform: rotateY(0deg);
+}
+.center:hover > .front-face{
+  transform: rotateY(-180deg);
+}
+.coment{
+
+			float:left;
+			width:20%;
+
+			border-top-right-radius: 50%;
+			border-radius: 10px 200px  30px;
+			filter: drop-shadow(16px 16px 20px red) invert(75%);
+			background-color: #97d9e1  ;
+			transform: translateX(-360px)    translateY(535px) ;
+			perspective: 800px;
+			padding-left:40px;
+
+
+
+}
+.text{
+				padding-left:20px;
+				color:white;
+
+
+}
+b{
+				color:white;
+}
+</style>
+</head>
+<body>
+<h1>CAFE SHOP</h1>
+    <nav>
+        <a href="http://127.0.0.1:8000/product/home/">Home</a>
+        {% for element in category %}
+            <a href="http://127.0.0.1:8000/product/{{ element.title }}">{{ element.title }}</a>
+        {% endfor %}
+        <a href="http://127.0.0.1:8000/feedback">Feedback</a>
+    </nav>
+
+
+        <div class="product-card">
+            <div class="badge">Hot</div>
+            <div class="product-tumb">
+                <img src="data:image/jpg;base64,{{ product.base_64 }}" width="180" height="200">
+            </div>
+            <div class="product-details">
+                <span class="product-catagory">{{  product.category }}, {{  product.title }}</span>
+                <p>{{ product.description }}</p>
+                <div class="product-bottom-details">
+                    <div class="product-price"><small>{{  product.price }}</small>$90.99</div>
+                    <div class="product-links">
+                        <a href=""><i class="fa fa-heart"></i></a>
+
+
+                            <i class="fa fa-comments"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h2>Comments for {{ product.title }}</h2>
+        <div class="coment">
+        {% if comments %}
+            <ul>
+                {% for comment in comments %}
+                    <li>
+                        <strong>Name:</strong> {{ comment.name }}<br>
+                        <strong>Comment:</strong> {{ comment.comment }}
+                    </li>
+                {% endfor %}
+            </ul>
+         </div>
+
+        {% else %}
+            <p>No comments available for this product.</p>
+        {% endif %}
+    </div>
+
+
+
+<p class="p1">
+  By <span>Aleks</span>
+</p>
+</body>
+</html>
+
+

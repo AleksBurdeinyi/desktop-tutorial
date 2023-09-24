@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Pepsi Website Landing Page</title>
+  <link href="{% static 'css/iced.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <h2>Blande Ice Drinks</h2>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li><a href="http://127.0.0.1:8000">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Apple & <br><span>Rhubarb Refresher</span></h2>
+                <p>A refreshing watermelon & mint drink over ice</p>
+                <h2>$ 4.3</h2>
+                <a href="#">View All Products</a>
+
+            </div>
+            <div class="imgBox">
+                <img src="/static/images/apple.png" class="pepsi">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><a href="http://127.0.0.1:8000/watermelon"><img src="/static/images/watermelon.png"></a></li>
+            <li><a href="http://127.0.0.1:8000/mango"><img src="/static/images/mango.png" ></a></li>
+            <li><a href="http://127.0.0.1:8000/orange"><img src="/static/images/orange.png" ></a></li>
+
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="img/facebook.png"></a></li>
+            <li><a href="#"><img src="img/twitter.png"></a></li>
+            <li><a href="#"><img src="img/instagram.png"></a></li>
+        </ul>
+    </section>
+
+
+
+</body>
+</html>

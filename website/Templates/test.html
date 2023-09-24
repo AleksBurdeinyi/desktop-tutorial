@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="{% static 'css/all_product.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<nav>
+  <a href="http://127.0.0.1:8000/all_products/all_products/" style="color:white;text-decoration: none"><h2>All Products</h2></a>
+  <ul class="list">
+    <li><a href="#">home</a></li>
+  <li><a class="active" href="http://127.0.0.1:8000"  >Home</a></li>
+            {% load humanize %}
+            {% for element in category %}
+                <li class="wrap"    style="float:left"><a href="{% url 'all_products' element.title %}">{{ element.title }}</a></li>
+            {% endfor %}
+  </ul>
+  <button class="search">Sear</button>
+  <button class="menu">Menu</button>
+</nav>
+{% for product in products %}
+         <div class="content">
+            <div class="textBox">
+           <a href="{% url 'product_detail' product.id %}"><img src="data:image/jpg;base64,{{ product.base_64 }}" width="180" height="200" alt="{{ product.title }}"></a>
+            <a style="color:white;text-decoration: none"href="{% url 'product_detail' product.id %}"><h3>{{ product.title }}</h3></a>
+<!--            <p>{{ product.description }}</p>-->
+            <p class="price">Ціна: ${{ product.price }}</p>
+            <p>Наявність: {% if product.status %}Так {% else %} Немає в наявності {% endif %}</p>
+            </div>
+             </div>
+        {% endfor %}
+<footer class="policy">
+    <ul>
+        <p>Privacy policy</p>
+        <p>Cookie policy</p>
+
+    </ul>
+    <p>&copy; 2023  All rights reserved.</p>
+</footer>
+</body>
+</html>

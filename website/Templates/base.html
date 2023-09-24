@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div  class="front">
+<!--<nav>-->
+<!--        <a href="http://127.0.0.1:8000/product/home/">Home</a>-->
+<!--        {% for element in category %}-->
+<!--            <a href="http://127.0.0.1:8000/product/{{ element.title }}">{{ element.title }}</a>-->
+<!--        {% endfor %}-->
+<!--        <a href="http://127.0.0.1:8000/feedback">Feedback</a>-->
+<!--</nav>-->
+<div  class="front">
+<nav    class="menu">
+  <ul class="topmenu">
+      <li><a href="http://127.0.0.1:8000/home/">Home</a></li>
+
+    <li><a href="http://127.0.0.1:8000/all_products/all_products/" class="active">Categories<span class="fa fa-angle-down"></span></a>
+
+    </li>
+    <li><a href="http://127.0.0.1:8000/about_us">About us</a></li>
+    <li><a href="">Contacts<span class="fa fa-angle-down"></span></a>
+    <ul class="submenu">
+            <li><a href="">ALEKS<br>
+              OWNER<span class="fa fa-angle-down"></span></a>
+                <ul class="submenu">
+                  <li><a href="">+44 7518 1934</a></li>
+                </ul>
+            <li><a href="">Jakub Milkevich<br>
+              BM<span class="fa fa-angle-down"></span></a>
+                    <ul class="submenu">
+                  <li><a href="">+44 7518 1934</a></li>
+                </ul>
+    <li><a href="https://t.me/@AleksAssistantBot">>AleksAssistantBot<span class="fa fa-angle-down"></span></a>
+          </ul>
+
+  </ul>
+</nav>
+      <p  id="writing">DISCOVER YOUR <br>PERFECT CUP OFF COFFEA</p>
+            <p  class="facts">BRING YOUR CUP AND GET DISCOUNT 20%</p>
+            <img src="/static/images/logo.png"   id="logo">
+
+</div>
+<!--???????-->
+
+
+<!--<nav>-->
+<!--      </ul>-->
+<!--    </li>-->
+<!--    <li><a href="">About</a></li>-->
+<!--    <li><a href="">Contacts<span class="fa fa-angle-down"></span></a></li>-->
+<!--    <ul class="submenu">-->
+<!--            <li><a href="">JOHN KANLEY<br>-->
+<!--              senior<span class="fa fa-angle-down"></span></a>-->
+<!--                <ul class="submenu">-->
+<!--                  <li><a href="">+44 7518 1934</a></li>-->
+<!--                </ul>-->
+<!--            <li><a href="">Jakub Milkevich<br>-->
+<!--              midle<span class="fa fa-angle-down"></span></a>-->
+<!--                    <ul class="submenu">-->
+<!--                  <li><a href="">+44 7518 1934</a></li>-->
+<!--                </ul>-->
+<!--          </ul>-->
+<!--  </ul>-->
+<!--</nav>-->
+<!--      <p  id="writing">DISCOVER YOUR <br>PERFECT CUP OFF COFFEA</p>-->
+<!--            <p  class="facts">BRING YOUR CUP AND GET DISCOUNT 20%</p>-->
+<!--            <img src="/static/images/logo.png"   id="logo">-->
+
+<!--</div>-->
+
+
+
+
+
+
+
+
+<!--<div    class="wrap2">-->
+<!--                    <p  class="zag2">BEST DRINK</p>-->
+<!--                            <hr>-->
+<!--    <div class="all">-->
+<!--{% for element in products %}-->
+<!--  <div class="item">-->
+<!--    <div class="wrap">-->
+<!--             <img src="data:image/jpg;base64,{{element.base_64}}"  id="cofe2">-->
+<!--            <p class="price">${{ element.price }}</p>-->
+<!--             <p class="cof_name">{{element.title}}</p>-->
+
+<!--            <button  class="buton"> BUY</button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--         </div>-->
+<!--    </div>-->
+<!--{% endfor %}-->
+
+<!--</div>-->
+<!--    <span  class="text_cake">-->
+<!--        <p  class="shrift_cake">FROM 3.50$<span   class="color_shrift"><br>CHOCOLATE CAKE</span>-->
+<!--            <hr color="#ec9033" id="h">-->
+<!--        </p><p  class="shrift_cake"><span   class="color_shrift">TOGETHER WITH<br>COFFEE</span></p>-->
+<!--        <p id="describe">A cake is a product that can rightfully <br>be called a masterpiece of culinary art.</p>-->
+<!--        <button id="but_our_menu">OUR MENU</button>-->
+<!--    </span>-->
+
+<!--    <img src="/static/images/cake.png"   id="cake">-->
+
+
+<!--            <div class="wrap_bean">-->
+
+
+
+<!--                    <img src="/static/images/beans.png"  class="bean">-->
+<!--                    <span>-->
+<!--                        <p  class="bean_shr">FROM 20$.50<br>BY FOR HOME</p>-->
+
+<!--                        <p class="bean_shr">TOTAL REM<br>APERIAM</p>-->
+<!--                        <p  class="bean_shr2">How the taste will unfold in your cup largely depends on roasting: <br>-->
+<!--                            The stronger it is, the deeper and richer the aroma of the drink will be. </p>-->
+<!--                        <button class="bean_button">ALL COFFEE</button>-->
+<!--                    </span>-->
+
+
+<!--            </div>-->
+<!--            <div>-->
+<!--                    <img src="/static/images/Coffe_cups.jpg" id="about">-->
+<!--                    <p  id="about1"><b>ABOUT US</b></p>-->
+<!--                    <p  id="about_tex1">-->
+<!--                        A cozy atmosphere that embodies the perfect<br> combination of comfort and style.<br>-->
+<!--                        A wide selection of gourmet dishes prepared with love<br> from natural products.</p>-->
+<!--                    <p  id="about_tex2">Masterfully brewed coffee that will give you<br> an unsurpassed aroma and mood for the whole day.<br>-->
+<!--                    Excellent service,<br> because for us you are the most important thing.</p>-->
+<!--                    <button id="but_about">LEARN MORE</button>-->
+<!--            </div>-->
+<!--            <div  class="wrap_work">-->
+<!--                    <p  id="work1">OPENING<br>DAYS<br><span class="open_close">09:00-20:00</span>-->
+<!--                    </p>-->
+<!--                    <p  id="work2">SATURDAY AND <br>SUNDAY<br> <span class="open_close">09:00-20:00</span></p>-->
+<!--                    <p  id="work_loc">LOCATION</p>-->
+
+<!--                    <p  id="work3">We are located in the heart<br> of the city,<br> where you can <br>always come and relax</p>-->
+<!--                    <p  id="work4">-->
+<!--                    🚩 ADDRESS</p>-->
+<!--                    <p  id="work5">123,Main St.Anytown , CA<br>12345</p>-->
+<!--                <button id="but_contus">CONTACT US</button>-->
+
+<!--            </div>-->
+
+
+
+<!--                    <div    class="photo_pos">-->
+<!--                            <img src="/static/images/img1.jpg"  alt=""  height="450" width="289"  >-->
+
+
+<!--                            <img src="/static/images/img2.jpg"  alt=""  height="450" width="289"   >-->
+
+
+
+
+
+<!--                            <img src="/static/images/img3.jpg"  alt=""  height="450" width="289"  class="img3">-->
+
+
+<!--                            <img src="/static/images/img4.jpg"  alt="" height="450" width="289"   >-->
+<!--                    </div>-->
+<!--                    <p  id="text_folow_us"> <img src="/static/images/insta_gray.png" id="inst"><br>FOLLOW US ON <br>INSTAGRAM<br></p>-->
+
+<!--                    <div    class="finish_page">-->
+<!--                                    <hr id="finish1">-->
+<!--                                    <p id="rezerv">FOR REVERSION</p>-->
+<!--                                    <p  id="number_rezerv">+44 791-856-843</p>-->
+<!--                                    <p  id="number_rezerv2" >+44 791-856-843</p>-->
+<!--                                    <p  id="email_rezerv">ALEKS@GAMIL.COM</p>-->
+<!--                    </div>-->
+</div>
+
+
+
+
+
+</body>
+</html>

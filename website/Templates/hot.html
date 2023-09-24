@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div  class="front">
+<nav    class="menu">
+  <ul class="topmenu">
+      <li><a href="http://127.0.0.1:8000">Home</a></li>
+
+    <li><a href="" class="active">Categories<span class="fa fa-angle-down"></span></a>
+      <ul class="submenu">
+          {% for element in category %}
+        <li><a href="http://127.0.0.1:8000/product/{{ element.title }}"id="a1">{{ element.title }}<span class="fa fa-angle-down"></span></a>
+
+
+          {% endfor %}
+      </ul>
+    <li><a href="http://127.0.0.1:8000/about_us/">About us</a></li>
+      <li><a href="">Contacts<span class="fa fa-angle-down"></span></a>
+    <ul class="submenu">
+            <li><a href="">JOHN KANLEY<br>
+              senior<span class="fa fa-angle-down"></span></a>
+                <ul class="submenu">
+                  <li><a href="">+44 7518 1934</a></li>
+                </ul>
+            <li><a href="">Jakub Milkevich<br>
+              midle<span class="fa fa-angle-down"></span></a>
+                    <ul class="submenu">
+                  <li><a href="">+44 7518 1934</a></li>
+                </ul>
+          </ul>
+
+  </ul>
+</body>
+</html>

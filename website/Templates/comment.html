@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+                        background-color: #f5f5f5;
+    }
+    form {
+                        max-width: 800px;
+                        margin: 0 auto;
+                        padding: 20px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        background-color: #f5f5f5;
+                        margin-top:100px;
+}
+
+/* Стилі для елементів форми */
+label {
+                        font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select {
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 3px;
+}
+
+select {
+                        height: 36px;
+}
+
+/* Стилі для кнопки відправки */
+input[type="submit"] {
+                        background-color: #007BFF;
+                        color: #fff;
+                        border: none;
+                        border-radius: 3px;
+                        padding: 10px 20px;
+                        cursor: pointer;
+                        font-size: 16px;
+}
+
+
+input[type="submit"]:hover {
+                         background-color: #0056b3;
+}
+</style>
+<body>
+<form method="post" action="{% url 'comment_submit_url' %}">
+    {% csrf_token %}
+    <label for="name">Ім'я:</label><br>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="comment">Коментар:</label><br>
+    <textarea id="comment" name="comment" rows="4" cols="10" required></textarea><br>
+
+    <label for="product">Товар:</label><br>
+    <select id="product" name="product">
+        {% for product in products %}
+            <option value="{{ product.id }}">{{ product.title }}</option>
+        {% endfor %}
+    </select><br>
+
+    <input type="submit" value="Відправити коментар">
+</form>
+</body>
+</html>

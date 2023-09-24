@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.title }} - Деталі продукту</title>
+</head>
+<body>
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.description }}</p> <!-- Відображення опису продукту -->
+    <h2>$ {{ product.price }}</h2>
+    <p>Наявність: {% if product.status %} В наявності {% else %} Немає в наявності {% endif %}</p>
+</body>
+</html>

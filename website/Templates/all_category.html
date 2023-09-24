@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="{% static 'css/all_product.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<nav>
+  <a href="http://127.0.0.1:8000/all_products/all_products/" style="color:white;text-decoration: none"><h2>All Products</h2></a>
+  <ul class="list">
+
+  <li><a class="active" href="http://127.0.0.1:8000/home/"  >Home</a></li>
+            {% load humanize %}
+            {% for element in category %}
+                <li><a href="{% url 'all_products' element.title %}">{{ element.title }}</a></li>
+            {% endfor %}
+  </ul>
+
+</nav>
+
+
+{% for product in products %}
+    <div class="wrap">
+           <a href="{% url 'product_detail' product.id %}"><img src="data:image/jpg;base64,{{ product.base_64 }}" width="240" height="270" alt="{{ product.title }}"></a>
+            <a style="color:white;text-decoration: none"href="{% url 'product_detail' product.id %}"><h3 style="font-size:30px;margin-top:-5px" >{{ product.title }}</h3></a>
+            <p  style="margin-top:-35px;font-size:20px;"><b>Ціна: ${{ product.price }}</b></p>
+            <p style="font-size:20px"><b>Наявність: {% if product.status %}Так {% else %} Немає в наявності {% endif %}</b></p>
+       </div>
+        {% endfor %}
+
+
+
+
+</body>
+</html>
